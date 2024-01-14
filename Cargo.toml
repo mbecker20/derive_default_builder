@@ -1,0 +1,21 @@
+[workspace]
+members = ["derive"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["mbecker20"]
+repository = "https://github.com/mbecker20/mongo_indexed"
+license = "GPL-3.0-or-later"
+
+[package]
+name = "derive_default_builder"
+description = "derives a builder implementation relying on all fields implementing Default"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+# derive_default_builder = "0.1.0"

@@ -1,0 +1,15 @@
+[package]
+name = "derive_default_builder_derive"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.35"
+proc-macro2 = "1.0.76"
+syn = "2.0.48"
