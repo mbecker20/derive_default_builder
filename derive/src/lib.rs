@@ -51,6 +51,12 @@ pub fn derive_builder(input: TokenStream) -> TokenStream {
   let (impl_generics, ty_generics, where_clause) = generics.split_for_impl();
 
   quote! {
+    impl #impl_generics #ident #ty_generics {
+      pub fn builder() -> #builder_ident #ty_generics {
+        #builder_ident::default()
+      }
+    }
+
     #[automatically_derived]
     #vis struct #builder_ident #generics {
       #(#builder_struct_fields),*
@@ -103,10 +109,10 @@ fn field_set_fn(
   builder_ident: &Ident,
   generics: &Generics,
 ) -> proc_macro2::TokenStream {
-  let fn_name = Ident::new(&format!("set_{ident}"), Span::call_site());
+  // let fn_name = Ident::new(&format!("set_{ident}"), Span::call_site());
   let (_, ty_generics, _) = generics.split_for_impl();
   quote! {
-    pub fn #fn_name(mut self, #ident: impl Into<#ty>) -> #builder_ident #ty_generics {
+    pub fn #ident(mut self, #ident: impl Into<#ty>) -> #builder_ident #ty_generics {
       self.#ident = derive_default_builder::value_as_option!(#ty, #ident.into());
       self
     }
