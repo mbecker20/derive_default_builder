@@ -1,5 +1,6 @@
 [package]
 name = "derive_default_builder_derive"
+description = "proc macro crate for derive_default_builder"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
