@@ -5,10 +5,24 @@ version = 3
 [[package]]
 name = "derive_default_builder"
 version = "0.1.2"
+dependencies = [
+ "derive_default_builder_derive 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "derive_default_builder_derive"
 version = "0.1.2"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "derive_default_builder_derive"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5b8d9cdaf29bc96e201a2edfc491e75a425128a5cedb952165f7dcb7dba8ea31"
 dependencies = [
  "proc-macro2",
  "quote",
