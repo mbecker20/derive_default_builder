@@ -19,7 +19,7 @@ pub fn derive_builder(input: TokenStream) -> TokenStream {
       return None;
     };
     let builder_struct_field = quote! {
-      #ident: make_option::make_option!(#ty)
+      #ident: derive_default_builder::make_option!(#ty)
     };
     Some(builder_struct_field)
   });

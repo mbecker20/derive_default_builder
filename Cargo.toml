@@ -2,7 +2,7 @@
 members = ["derive"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["mbecker20"]
 repository = "https://github.com/mbecker20/mongo_indexed"

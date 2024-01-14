@@ -1,3 +1,5 @@
+// pub use derive_default_builder::*;
+
 #[macro_export]
 macro_rules! make_option {
     (Option<$ty:ty>) => {
@@ -10,20 +12,20 @@ macro_rules! make_option {
 
 #[macro_export]
 macro_rules! value_as_option {
-    (Option<$ty:ty>, $expr:expr) => {
-        $expr
-    };
-    ($ty:ty, $expr:expr) => {
-        Some($expr)
-    };
+  (Option<$ty:ty>, $expr:expr) => {
+    $expr
+  };
+  ($ty:ty, $expr:expr) => {
+    Some($expr)
+  };
 }
 
 #[macro_export]
 macro_rules! value_maybe_as_option {
-    (Option<$ty:ty>, $_:expr, $expr:expr) => {
-        $expr
-    };
-    ($ty:ty, $expr:expr, $_:expr) => {
-        $expr
-    };
+  (Option<$ty:ty>, $_:expr, $expr:expr) => {
+    $expr
+  };
+  ($ty:ty, $expr:expr, $_:expr) => {
+    $expr
+  };
 }
