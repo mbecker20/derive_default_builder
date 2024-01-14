@@ -2,12 +2,12 @@ pub use derive_default_builder_derive::*;
 
 #[macro_export]
 macro_rules! make_option {
-    (Option<$ty:ty>) => {
-        Option<$ty>
-    };
-    ($ty:ty) => {
-        Option<$ty>
-    }
+  (Option<$ty:ty>) => {
+    Option<$ty>
+  };
+  ($ty:ty) => {
+    Option<$ty>
+  }
 }
 
 #[macro_export]
