@@ -2,7 +2,7 @@
 members = ["derive"]
 
 [workspace.package]
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 authors = ["mbecker20"]
 repository = "https://github.com/mbecker20/derive_default_builder"

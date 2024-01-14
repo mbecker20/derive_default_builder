@@ -69,7 +69,7 @@ fn fn_build_field(ident: &Ident, ty: &Type) -> proc_macro2::TokenStream {
 fn field_set_fn(ident: &Ident, ty: &Type, builder_ident: &Ident) -> proc_macro2::TokenStream {
   let fn_name = Ident::new(&format!("set_{ident}"), Span::call_site());
   quote! {
-    pub fn #fn_name(self, #ident: impl Into<#ty>) -> #builder_ident {
+    pub fn #fn_name(mut self, #ident: impl Into<#ty>) -> #builder_ident {
       self.#ident = derive_default_builder::value_as_option!(#ty, #ident.into());
       self
     }
